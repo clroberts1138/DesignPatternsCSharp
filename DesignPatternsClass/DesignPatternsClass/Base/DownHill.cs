@@ -8,14 +8,14 @@ namespace DesignPatternsClass
 {
     public class DownHill : AbstractMountainBike
     {
-        public DownHill()
-            : this(BikeColor.Red)
+        public DownHill(IWheel wheel)
+            : this(wheel,BikeColor.Red)
         {
 
         }
 
-        public DownHill(BikeColor color)
-            : base(color)
+        public DownHill(IWheel wheel,BikeColor color)
+            : base(wheel,color)
         {
 
         }

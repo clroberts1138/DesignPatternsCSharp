@@ -9,14 +9,14 @@ namespace DesignPatternsClass
     public class CrossCountry : AbstractMountainBike
     {
 
-        public CrossCountry()
-            : this(BikeColor.Green)
+        public CrossCountry(IWheel wheel)
+            : this(wheel,BikeColor.Green)
         {
 
         }
 
-        public CrossCountry(BikeColor color)
-            : base(color)
+        public CrossCountry(IWheel wheel,BikeColor color)
+            : base(wheel,color)
         {
 
         }
