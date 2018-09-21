@@ -19,6 +19,8 @@ namespace DesignPatternsClass
             }
         }
 
+        public abstract decimal Price { get; }
+
         public AbstractBike(IWheel wheel)
             : this(wheel, BikeColor.Chrome)
         {
@@ -44,9 +46,25 @@ namespace DesignPatternsClass
             this._color = color;
         }
 
+        public virtual void CleanFrame()
+        {
+            Console.WriteLine("Cleaning Frame...");
+        }
+
+        public virtual void AirTires()
+        {
+            Console.WriteLine("Airing up tires...");
+        }
+
+        public virtual void TestRide()
+        {
+            Console.WriteLine("Taking bike for a test ride...");
+        }
+
         public override string ToString()
         {
-            return this.GetType().Name + "Bicycle has a " +_wheel+ "and the Color is " + _color;
+            return this.GetType().Name + " Bicycle has a " +_wheel+
+                " and the Color is " + _color + " and it costs $" +Price;
         }
     }
 }

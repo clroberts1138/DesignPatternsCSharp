@@ -11,13 +11,15 @@ namespace DesignPatternsClass
         public Touring(IWheel wheel)
             : this(wheel,BikeColor.Blue)
         {
-
         }
 
         public Touring(IWheel wheel, BikeColor color)
             : base(wheel,color)
         {
-
+        }
+        public override decimal Price
+        {
+            get { return 570.00m; }
         }
 
 

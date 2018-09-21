@@ -11,13 +11,16 @@ namespace DesignPatternsClass
         public AbstractRoadBike(IWheel wheel)
             :this(wheel,BikeColor.Chrome)
         {
-
         }
 
         public AbstractRoadBike(IWheel wheel,BikeColor color)
             : base(wheel,color)
         {
+        }
 
+        public override decimal Price
+        {
+            get { return 540.00m; }
         }
     }
 }
