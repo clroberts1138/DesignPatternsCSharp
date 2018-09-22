@@ -20,7 +20,7 @@ namespace DesignPatternsClass
             // AbstractFactoryPatternDemo();
             //BuilderPatternDemo();
             // AdapterPatternDemo();
-            // DecoratorPatternDemo();
+            DecoratorPatternDemo();
             FacadePatternDemo();
         }
 

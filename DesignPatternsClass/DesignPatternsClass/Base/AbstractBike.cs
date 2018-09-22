@@ -10,6 +10,7 @@ namespace DesignPatternsClass
     {
         private IWheel _wheel;
         private BikeColor _color;
+        private string _printColor;
 
         public virtual IWheel Wheel
         {
@@ -63,8 +64,17 @@ namespace DesignPatternsClass
 
         public override string ToString()
         {
-            return this.GetType().Name + " Bicycle has a " +_wheel+
-                " and the Color is " + _color + " and it costs $" +Price;
+            if (this.GetType().Name == "GoldFrameBike")
+            {
+                _printColor = "Gold";
+                return this.GetType().Name + " Bicycle has a " + _wheel +
+                " and the Color is " + _printColor + " and it costs $" + Price;
+            }
+            else
+            {
+                return this.GetType().Name + " Bicycle has a " + _wheel +
+                " and the Color is " + _color + " and it costs $" + Price;
+            }
         }
     }
 }
