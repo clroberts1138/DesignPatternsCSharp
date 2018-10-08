@@ -18,18 +18,83 @@ namespace DesignPatternsClass
 {
     class Program
     {
-        static void Main(string[] args)
-        {
-            // SingletonPatternDemo();
-            // AbstractFactoryPatternDemo();
-            //BuilderPatternDemo();
-            // AdapterPatternDemo();
-            //   DecoratorPatternDemo();
-            //   FacadePatternDemo();
-            //   IteratorPatternDemo2();
-            //ObserverPatternDemo();
-            VisitorPatternDemo();
-        }
+            static void Main(string[] args)
+            {
+                string myChoice;
+
+                do
+
+                {
+                    // Print A Menu
+                    Console.WriteLine("Running Classwork\n");
+
+                    Console.WriteLine("1 - SingletonPatternDemo");
+                    Console.WriteLine("2 - AbstractFactoryPatternDemo");
+                    Console.WriteLine("3 - BuilderPatternDemo");
+                    Console.WriteLine("4 - FacadePatternDemo");
+                    Console.WriteLine("5 - IteratorPatternDemo");
+                    Console.WriteLine("6 - IteratorPatternDemo2");
+                    Console.WriteLine("7 - ObserverPatternDemo");
+                    Console.WriteLine("8 - VisitorPatternDemo");
+                    Console.WriteLine("Q - Quit\n");
+
+                    Console.WriteLine("Choice (1 - 8 or Q): ");
+
+                    // Retrieve the user's choice
+                    myChoice = Console.ReadLine();
+
+                    // Make a decision based on the user's choice
+                    switch (myChoice)
+                    {
+                        case "1":
+                            Console.WriteLine("You Wish to run SingletonPatternDemo");
+                            SingletonPatternDemo();
+                            break;
+                        case "2":
+                            Console.WriteLine("You wish to run AbstractFactoryPatternDemo");
+                            AbstractFactoryPatternDemo();
+                            break;
+                        case "3":
+                            Console.WriteLine("You Wish to run BuilderPatternDemo");
+                            BuilderPatternDemo();
+                            break;
+                        case "4":
+                            Console.WriteLine("You Wish to Run FacadePatternDemo");
+                            FacadePatternDemo();
+                            break;
+                        case "5":
+                            Console.WriteLine("You Wish to Run IteratorPatternDemo");
+                            IteratorPatternDemo();
+                            break;
+                        case "6":
+                            Console.WriteLine("You Wish to Run IteratorPatternDemo2");
+                           IteratorPatternDemo2();
+                           break;
+                       case "7":
+                            Console.WriteLine("You Wish to Run ObserverPatternDemo");
+                           ObserverPatternDemo();
+                           break;
+                        case "8":
+                           Console.WriteLine("You Wish to Run VisitorPatternDemo");
+                           VisitorPatternDemo();
+                           break;
+                       case "Q":
+                           case "q":
+                           Console.WriteLine("Bye.");
+                           break;
+                        default:
+                           Console.WriteLine("{0} is not a valid choice", myChoice);
+                           break;
+                    }
+
+                    // Pause to allow the user to see the results
+                    Console.Write("press Enter key to continue...");
+                    Console.ReadLine();
+                    Console.WriteLine();
+                } while (myChoice != "Q" && myChoice != "q"); // Keep going until the user wants to quit
+            }
+
+        
 
         private static void VisitorPatternDemo()
         {
